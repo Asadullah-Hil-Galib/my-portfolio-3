@@ -368,8 +368,7 @@ nav .menu .button:hover
 }
 ::-webkit-scrollbar
 {
-    background: linear-gradient(#e83a3b, green);
-    width: 2px;
+    width: 0px;
 }
 
 /* -----------------------------------------------
