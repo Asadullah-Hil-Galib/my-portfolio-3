@@ -1,0 +1,994 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap');
+/* ----------------------------------------
+            For Full Pages
+---------------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    /* overflow: hidden; */
+}
+:root
+{
+    --color-1: #333;
+    --color-2: #777;
+    --color-3: #fff;
+    --para-size: 1.1rem;
+    --para-weight: 300;
+}
+.container
+{
+    width: 1190px;
+}
+.card
+{
+    font-size: 15px;
+    background: var(--color-2);
+    color: var(--color-3);
+    padding: 10px 20px;
+    font-weight: 400;
+}
+.active
+{
+    background: #e83a3b;
+}
+/*------------------------------------------------
+            Navbar Section Style
+-------------------------------------------------- */
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 1px 20px var(--color-2);
+    padding: 10px 5%;
+    position:fixed;
+    top: 0;
+    z-index: 300;
+    max-width: 100%;
+    min-width: 100%;
+}
+nav .nav-logo img
+{
+    max-width: 70%;
+}
+nav .menu
+{
+    display: flex;
+}
+nav ul
+{
+    display: flex;
+    align-items: center;
+}
+nav ul li
+{
+    list-style: none;
+    margin-right: 2rem;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-1);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .5s;
+    padding-bottom: 4px;
+}
+nav ul li a:hover
+{
+    border-color: var(--color-1);
+}
+nav .menu .button
+{
+    width: 150px;
+    background: #fff;
+    border: 2px solid var(--color-1);
+    color: var(--color-1);
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    transition: transform .4s;
+    display: block;
+}
+nav .menu .button:hover
+{
+    background: var(--color-1);
+    transform: translateY(-3px);
+    color: var(--color-3);
+}
+/* -----------------------------------------------
+           Header Banner Section 
+----------------------------------------------- */
+#header-banner
+{
+    height: calc(100vh - 80px);
+    background: #f9f9f9;
+    position: relative;
+    top: 100px;
+}
+#header-banner .banner-image
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #c1885b;
+    z-index: 1;
+    -webkit-clip-path: polygon(25% 0,100% 0,100% 25%,25% 100%,0 50%);
+    clip-path: polygon(25% 0,100% 0,100% 100%,25% 100%,0 50%);
+}
+#header-banner .banner-image .img
+{
+    background: url(images/pictur-1.png) no-repeat bottom right;
+    background-attachment:fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+#header-banner .container
+{
+    display: flex;
+    width: 1190px;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+    z-index:3;
+    position: relative;
+    text-align: left;
+}
+#header-banner .container div
+{
+    width: 50%;
+}
+#header-banner .container h1
+{
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-1);
+}
+#header-banner .container h1 span
+{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-1);
+}
+#header-banner .container p
+{
+    color: var(--color-2);
+    font-size: var(--para-size);
+}
+
+
+/* -----------------------------------------------
+           About Me Section Style
+----------------------------------------------- */
+#about-me
+{
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+}
+#about-me .container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    align-items: center;
+}
+.about-me-img img
+{
+      max-width: 100%;
+}
+.about-me-info h2
+{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 40px 0;
+    color: var(--color-1);
+}
+.about-me-info p
+{
+    color: var(--color-2);
+    font-size: var(--para-size);
+    font-weight: var(--para-weight);
+    line-height: 35px;
+}
+.about-me-info .button
+{
+    background: var(--color-1);
+    border: 2px solid var(--color-1);
+    font-size: var(--para-size);
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    width: 200px;
+    padding: 14px 0;
+    display: block;
+    text-align: center;
+    color: var(--color-3);
+    transition: .4s;
+}
+.about-me-info .button:hover
+{
+    background: var(--color-3);
+    color: var(--color-1);
+    transform: translateY(-5px);
+}
+
+
+/* -----------------------------------------------
+           Portfolio Section Style
+----------------------------------------------- */
+#portfolio 
+{
+    display: flex;
+    justify-content: center;
+    background: #d6d6d6c2;
+    padding: 80px 0;
+}
+.portfolio-header-nav
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.portfolio-header-nav h1
+{
+    font-size: 35px;
+    font-weight: 700;
+}
+.portfolio-header-nav ul
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.portfolio-header-nav ul li
+{
+    padding: 10px 20px;
+    margin-left: 15px;
+    transition: .4s;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+.portfolio-items
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+.portfolio-item
+{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+.portfolio-item.hide
+{
+    display: none;
+}
+.portfolio-item.show
+{
+    display: block;
+    animation: showItem 0.5s ease;
+}
+@-webkit-keyframes showItem 
+{
+     0%{
+         -webkit-transform: scale(0.8);
+         transform: scale(0.8);
+         opacity: 0;
+     }
+     100%{
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         opacity: 1;
+     }
+}
+@keyframes showItem 
+{
+     0%{
+         -webkit-transform: scale(0.8);
+         transform: scale(0.8);
+         opacity: 0;
+     }
+     100%{
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         opacity: 1;
+     }
+}
+
+
+.portfolio-item img
+{
+    max-width: 100%;
+    transition: 2s linear;
+}
+/* .portfolio-item:hover.portfolio-item img{
+   transform: translateY(-110%);
+} */
+.portfolio-item .item-info
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgb(0, 0, 0));
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 5%;
+    color: var(--color-3);
+}
+.portfolio-item .item-info span
+{
+    cursor: pointer;
+}
+.portfolio-item .item-info
+ {
+    display: none;
+}
+.portfolio-item 
+{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar
+{
+    background: linear-gradient(#e83a3b, green);
+    width: 2px;
+}
+
+/* -----------------------------------------------
+           Skills Section Style
+----------------------------------------------- */
+#skills
+{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+#skills .containe
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#skills .skill-details,.skill-name
+{
+    width: 45%;
+}
+#skills .skill-details h2
+{
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--color-1);
+}
+#skills .skill-details p
+{
+    font-size: var(--para-size);
+    font-weight: var(--para-weight);
+    color: var(--color-2);
+    margin-top: 15px;
+    line-height: 28px;
+}
+.skill-item
+{
+    margin-top: 2rem;
+}
+.progress-bar
+{
+    border: 1px solid var(--color-2);
+    height: 6px;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+.progress
+{
+    background: linear-gradient(90deg, #e83a3b, #16ff01);
+    height: 100%;
+}
+
+/* ---------------------------------------------
+        Watch Video Section Style
+--------------------------------------------- */
+#watch-video
+{
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(images/watch.jpg) no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+#watch-video .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#watch-video .play-button
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto;
+    transition: transform .4s linear;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+#watch-video .play-button:hover
+{
+    transform: scale(1.1);
+}
+#watch-video h1
+{
+    font-size: 38px;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: bolder;
+    color: #fff;
+    margin-bottom: 30px;
+}
+#watch-video .watch-button
+{
+    border: 2px solid var(--color-3);
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--color-3);
+    background: transparent;
+    transition: all 0.4s;
+}
+#watch-video .watch-button:hover
+{
+    transform: translateY(-6px);
+    background: var(--color-3);
+    color: var(--color-1);
+}
+
+/* --------------------------------------------
+          Branding Section Style 
+-------------------------------------------- */
+#branding
+{
+    display: flex;
+    justify-content: center;
+}
+#branding .container
+{
+    overflow: hidden;
+}
+#branding .swiper-wrapper
+{
+    display: flex;
+    /* overflow: hidden; */
+}
+
+/* -----------------------------------------------
+           Blog Section Style
+----------------------------------------------- */
+#blog
+{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+.blog-header h1
+{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-top: 2rem;
+}
+
+.all-blog-items
+{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+.blog-item .blog-img img
+{
+    max-width: 100%;
+    cursor: pointer;
+}
+.blog-info h4
+{
+    font-size: 1.3rem;
+    color: var(--color-1);
+    margin-top: 1rem;
+}
+.blog-info div 
+{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: var(--para-size);
+    font-weight: var(--para-weight);
+    color: var(--color-2);
+}
+
+.blog-info a
+{
+    text-decoration: none;
+}
+
+/* ------------------------------------------
+            Enquiry Section Style
+------------------------------------------ */
+#enquiry
+{
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(images/2.jpg);
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#enquiry .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#enquiry h1
+{
+    font-size: 80px;
+    color: var(--color-3);
+}
+#enquiry .button
+{
+    background: var(--color-3);
+    width: 200px;
+    height: 58px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-1);
+    border: 2px solid var(--color-3);
+    margin: 0 auto;
+    margin-top: 2rem;
+    transition: all 0.4s linear;
+}
+#enquiry .button:hover
+{
+    transform: translateY(-5px);
+    background: transparent;
+    color: var(--color-3);
+}
+.enquiry-shape
+{
+    position: absolute;
+    top: -30px;
+    transform: rotate(180deg);
+}
+
+
+/* -----------------------------------------
+          Footer Section Style
+----------------------------------------- */
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-1);
+    height: 100px;
+}
+footer span{
+    font-size: var(--para-size);
+    color: var(--color-3);
+}
+footer span a
+{
+    color: #e83a3b;
+    text-decoration: none;
+}
+
+
+
+/* -----------------------------------------------
+----------------Responsive Style---------------
+ ----------------MAX_WIDTH_1050------------------- */
+@media only screen and (max-width: 1050px) {
+
+    /* Coustom All CSS */
+     .container{
+         max-width: 100%;
+         padding: 0 4%;
+         box-sizing: border-box;
+     }
+     :root {
+        --color-1: #333;
+        --color-2: #777;
+        --color-3: #fff;
+        --para-size: .9remrem;
+        --para-weight: 300;
+     }
+
+
+     /*-------Nav Section Style------*/
+      .responsive-menu{
+           display: block;
+      }
+      nav 
+      {
+          position: fixed;
+      }
+      nav .menu
+      {
+          display: flex;
+          position: absolute;
+          left: -100%;
+          top: 99%;
+          width: 100%;
+          z-index: 1000;
+          height: 100vh;
+          background: var(--color-3);
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s ease;
+      }
+      nav .menu.showMenu
+      {
+          left: 0%;
+      }
+      #closeMenu
+      {
+          display: block;
+          position: absolute;
+          top: 30px;
+          right: 50px;
+       }
+      nav .menu .button
+      {
+          margin: 0 auto;
+      }
+      nav .menu ul
+      {
+          display: block;
+          width: 100%;
+      }
+      nav .menu ul li
+      {
+          display: block;
+          width: 100%;
+          text-align:center;
+          margin-top: 20px;
+      } 
+      nav .menu ul li a
+      {
+          text-decoration: none;
+          color: var(--color-1);
+      }
+      /* Banner Sresponsive Style */
+      #header-banner 
+      {
+          top: 0px;
+      }
+      #header-banner .banner-image
+      {
+         height: 100%;
+         width: 100%;
+         -webkit-clip-path: none;
+         clip-path: none;
+      }
+      #header-banner .banner-image .img {
+         background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/pictur-1.png) no-repeat bottom right;
+         background-size: cover;
+      }
+      #header-banner .container h1{
+            color: var(--color-3);
+      }
+      #header-banner .container h1 span {
+           color: transparent;
+           -webkit-text-stroke: 1px var(--color-3);
+      }
+      #header-banner .container p{
+         color: var(--color-3);
+      }
+   /* About Me Responsive Section */
+     .about-me-info h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+    #about-me .container {
+        max-width: 80%;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 100px 0;
+    }
+/* Portfolio Section Responsive */
+    .portfolio-header-nav h1 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .portfolio-header-nav {
+        align-items: center;
+    }
+    .portfolio-items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .portfolio-item{
+        max-width: 250px;
+    }
+/* Skill Section Responsive */
+    #skills .skill-details h2{
+        font-weight: 600;
+    }
+/* Video Section Responsive */
+    #watch-video h1 {
+        font-size: 26px;
+        font-weight: 500;
+    }
+/* Blog Section Responsive  */
+    .blog-info h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .blog-info div {
+        font-size: 13px;
+        font-weight: var(--para-weight);
+    }
+    .blog-header h1 {
+        font-size: 35px;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+/* Enquiry Section Responsive */
+    #enquiry h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* -----------------------------------------------
+ ----------------Responsive Style---------------
+ -----------------MAX_WIDTH_960------------------------------ */
+@media only screen and (max-width: 960px) {
+    /* Skill Section Responsive */
+    #skills .container {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    }
+    #skills .skill-details, .skill-name {
+        width: 100%;
+    }
+}
+    
+
+/* -----------------------------------------------
+ ----------------Responsive Style---------------
+ -----------------MAX_WIDTH_860---------------------- */
+@media only screen and (max-width: 860px) {
+    /* Blog Section Responsive */
+    .all-blog-items {
+    grid-template-columns: repeat(2, 1fr);
+   }
+    .blog-item{
+        max-width: 310px;
+    }
+}
+
+/* -----------------------------------------------
+ ----------------Responsive Style---------------
+ -----------------MAX_WIDTH_700---------------------- */
+ @media only screen and (max-width:700px){
+     /* Banner Section Responsive */
+     #header-banner .container {
+        text-align: center;
+        display: flex;
+    }
+    #header-banner .container div:first-child{
+        width: 100%;
+    }
+    #header-banner .container div:last-child{
+        display: none;
+    }
+/* Portfolio Section Responsive */
+    .portfolio-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+/* Portfolio Section Responsive */
+    .portfolio-header-nav {
+        margin-top: 10px;
+        display: block;
+    }
+    .portfolio-header-nav h1 {
+        text-align: center;
+    }
+    .portfolio-header-nav ul {
+        justify-content: center;
+    }
+/* Video Section Responsive */
+    #watch-video .play-button {
+        width: 80px;
+        height: 80px;
+    }
+/* Blog Section Responsive */
+    #blog {
+        padding: 100px 0;
+    }
+    .blog-header h1 {
+        font-size: 29px;
+    }
+/* Enquiry Section Responsive */
+    #enquiry h1 {
+        font-size: 29px;
+    }
+}
+
+
+/* -----------------------------------------------
+ ----------------Responsive Style---------------
+ -----------------MAX_WIDTH_600---------------------- */
+ @media only screen and (max-width:600px){
+     /* Navbar Section Responsive */
+     nav .nav-logo img {
+        max-width: 48%;
+     }
+/* Banner Section Responsive */
+    #header-banner {
+        height: calc(100vh);
+    }
+    #header-banner .container h1 {
+        font-size: 40px;
+    }
+/* Portfolio Section Responsive */
+    .portfolio-header {
+        text-align: center;
+    }
+    .portfolio-header-nav h1 {
+        margin-top: 27px;
+    }
+/* Video Section Responsive */
+    #watch-video {
+        height: 100vh;
+    }
+/* Blog Section Responsive */
+    .blog-header {
+        text-align: center;
+    }
+    .all-blog-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #branding .swiper-wrapper {
+        display: flex;
+        /* overflow: hidden; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .swiper-slide {
+        width: 37% !important;
+    }
+
+}
+
+
+/* -----------------------------------------------
+ ----------------Responsive Style---------------
+ -----------------MAX_WIDTH_500---------------------- */
+ @media only screen and (max-width:500px){
+     /* Banner Section Responsive */
+    #header-banner {
+        height: calc(64vh);
+    }
+     /* Portfolio Section Responsive */
+     .portfolio-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+    ol, ul {
+        padding-left: 0px;
+    }
+    .portfolio-header-nav ul li {
+        padding: 4px 16px;
+        margin-left: 9px;
+    }
+    #watch-video h1 {
+        font-size: 30px;
+        width: 100%;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    #about-me .container {
+        max-width: 100%;
+    }
+    #branding .swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio-item {
+        max-width: 90%;
+    }
+ }
+
+
+
+
+
+/* --------------All FUll Page Need Down -------------- */
+.responsive-menu
+{
+    display: none;
+    font-size: 28px;
+    color: var(--color-1);
+}
+.responsive-menu i
+{
+    cursor: pointer;
+} 
+#closeMenu
+{
+    display: none;
+    cursor: pointer;
+}
+ .none{
+    display: none;
+}
+
+/* =========================== END CSS CODE ============================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
