@@ -617,7 +617,11 @@ footer span a
     text-decoration: none;
 }
 
-
+#skills .container {
+    width: 1190px;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* -----------------------------------------------
 ----------------Responsive Style---------------
