@@ -616,11 +616,10 @@ footer span a
     color: #e83a3b;
     text-decoration: none;
 }
-
-#skills .container {
-    width: 1190px;
+#skills > .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* -----------------------------------------------
