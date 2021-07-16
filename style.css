@@ -105,6 +105,23 @@ nav .menu .button:hover
     transform: translateY(-3px);
     color: var(--color-3);
 }
+
+
+.responsive-menu
+{
+    display: none;
+    font-size: 28px;
+    color: var(--color-1);
+}
+.responsive-menu i
+{
+    cursor: pointer;
+} 
+#closeMenu
+{
+    display: none;
+    cursor: pointer;
+}
 /* -----------------------------------------------
            Header Banner Section 
 ----------------------------------------------- */
@@ -953,21 +970,7 @@ footer span a
 
 
 /* --------------All FUll Page Need Down -------------- */
-.responsive-menu
-{
-    display: none;
-    font-size: 28px;
-    color: var(--color-1);
-}
-.responsive-menu i
-{
-    cursor: pointer;
-} 
-#closeMenu
-{
-    display: none;
-    cursor: pointer;
-}
+
  .none{
     display: none;
 }
